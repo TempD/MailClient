@@ -1,0 +1,144 @@
+@import "~bootstrap/scss/bootstrap"
+@import "react-datepicker"
+@import "react-datepicker/dist/react-datepicker.css"
+
+$mobile-xs: 320px
+$mobile: 375px
+$tablet: 768px
+$desktop: 992px
+$desktop-xl: 1200px
+
+// XS mobile rules
+@media screen and (max-width: #{$mobile-xs})
+  #search-input
+    width: 65%
+  .react-datepicker__close-icon
+    margin-right: -12rem
+
+// Mobile rules
+@media screen and (min-width: #{$mobile-xs + 1}) and (max-width: #{$mobile})
+  #search-input
+    width: 70%
+  .react-datepicker__close-icon
+    margin-right: -14rem
+
+// LG Mobile rules
+@media screen and (min-width: #{$mobile + 1}) and (max-width: #{$tablet - 1})
+  #search-input
+    width: 60%
+  .react-datepicker__close-icon
+    margin-right: -14rem
+
+// Tablet rules
+@media screen and (min-width: $tablet) and (max-width: #{$desktop - 1px})
+  #search-input
+    width: 40%
+  .react-datepicker__close-icon
+    margin-right: -18rem
+
+// Desktop rules
+@media screen and (min-width: $desktop) and (max-width: #{$desktop-xl - 1px})
+  #search-input
+    width: 30%
+  .react-datepicker__close-icon
+    margin-right: -18rem
+
+// XL Desktop rules
+@media screen and (min-width: $desktop-xl)
+  #search-input
+    width: 20%
+  .react-datepicker__close-icon
+    margin-right: -17rem
+
+.datepicker-input
+  width: 2.5rem
+  background: url("Assets/icon_calender.svg") no-repeat scroll left 10px center/20px
+  text-indent: 2rem
+  border-right-width: 0px
+  border-top-right-radius: 0px
+  border-bottom-right-radius: 0px
+  &:focus
+    box-shadow: none
+
+#datepicker
+  width: auto
+
+#search-input
+  border-radius: 0px
+  z-index: 1
+
+.react-datepicker__close-icon
+  z-index: 2
+  &::after
+    background-color: #888888
+
+.search-svg-container
+  background-color: #f5f5f5
+  margin-left: -1px
+  img
+    height: 1rem
+    width: 1rem
+
+.header
+  background-color: #f5f5f5
+
+.header-item
+  img
+    height: .75rem
+    width: .75rem
+    opacity: 0
+  &::after
+    color: black
+    cursor: pointer
+    img
+      opacity: 100
+
+.header-wrapper
+  height: 2.75rem
+  background-color: #f5f5f5
+
+.selected
+    color: black !important
+    img
+      opacity: 100
+
+.sort-desc
+  img
+    transform: scaleY(-1)
+
+.mobile-row
+  img
+    height: 2rem
+    width: 2rem
+
+.mobile-date-arrow
+  height: .5rem !important
+  width: .5rem !important
+
+.mobile-clip
+  height: 1rem !important
+  width: 1rem !important
+
+.overflow-icon
+  color: white
+  font-size: .8rem
+  padding-top: .1rem
+  background-color: rgb(136, 136, 136)
+
+.text-emphasized
+  color: rgb(102, 102, 102)
+
+th
+  border-color: rgb(222, 226, 230) !important
+  cursor: pointer
+  &:hover
+    img
+      opacity: 100%
+    color: #444444
+
+tbody>tr
+  &:hover
+    color: rgb(19, 50, 212) !important
+    cursor: pointer
+
+
